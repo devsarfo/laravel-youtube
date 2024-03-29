@@ -662,7 +662,7 @@ class Youtube
             $username = $segments[count($segments) - 1];
             $channel = $this->searchChannelByName($username);
         } else if (strpos($path, '/@') === 0) {
-            $username = str_replace('@', '', $segments[count($segments) - 1]);
+            $username = $segments[count($segments) - 1];
             $channel = $this->searchChannelByName($username);
         } else {
             foreach ($this->youtube_reserved_urls as $r) {
